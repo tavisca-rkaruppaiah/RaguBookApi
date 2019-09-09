@@ -16,7 +16,7 @@ namespace RaguBookApi.Tests
         public void IsIdNegativeNumber()
         {
             response = service.Get(-1);
-            Assert.Equal(new InvalidId().ToString(), response.error.ToString());
+            Assert.Equal(new InvalidId().message, response.error.message);
 
         }
 
@@ -48,7 +48,7 @@ namespace RaguBookApi.Tests
                 author = "JKRowling"
             };
             response = service.Post(book);
-            Assert.Equal(new InvalidName().ToString(), response.error.ToString());
+            Assert.Equal(new InvalidName().message, response.error.message);
 
         }
 
@@ -64,7 +64,7 @@ namespace RaguBookApi.Tests
                 author = "JKRowling"
             };
             response = service.Post(book);
-            Assert.Equal(new InvalidCategory().ToString(), response.error.ToString());
+            Assert.Equal(new InvalidCategory().message, response.error.message);
 
         }
 
@@ -80,7 +80,7 @@ namespace RaguBookApi.Tests
                 author = "JKRowling12"
             };
             response = service.Post(book);
-            Assert.Equal(new InvalidAuthor().ToString(), response.error.ToString());
+            Assert.Equal(new InvalidAuthor().message, response.error.message);
 
         }
     }

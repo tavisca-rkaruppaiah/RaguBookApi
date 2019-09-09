@@ -1,4 +1,5 @@
-﻿using RaguBookApi.Interfaces;
+﻿using RaguBookApi.Abstract;
+using RaguBookApi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace RaguBookApi.Errors
 {
-    public class InvalidName : IError
+    public class InvalidName : Error
     {
-        public int status = 100;
-        public string message = "Name should be letters only";
+        public InvalidName() : base(100, "Name should be letters only")
+        {
+
+        }
     }
 }

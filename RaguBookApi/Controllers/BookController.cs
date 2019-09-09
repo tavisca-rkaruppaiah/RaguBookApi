@@ -32,7 +32,14 @@ namespace RaguBookApi.Controllers
             }
             else
             {
-                return BadRequest(response.error);
+                if (response.error.status == 404)
+                {
+                    return NotFound(response.error);
+                }
+                else
+                {
+                    return BadRequest(response.error);
+                }
             }
         }
 
@@ -61,7 +68,14 @@ namespace RaguBookApi.Controllers
             }
             else
             {
-                return BadRequest(response.error);
+                if (response.error.status == 404)
+                {
+                    return NotFound(response.error);
+                }
+                else
+                {
+                    return BadRequest(response.error);
+                }
             }
         }
 
@@ -75,7 +89,14 @@ namespace RaguBookApi.Controllers
             }
             else
             {
-                return BadRequest(response.error);
+                if(response.error.status == 404)
+                {
+                    return NotFound(response.error);
+                }
+                else
+                {
+                    return BadRequest(response.error);
+                }
             }
         }
     }
