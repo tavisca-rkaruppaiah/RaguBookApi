@@ -1,5 +1,3 @@
-using RaguBookApi.Controllers;
-using RaguBookApi.Errors;
 using RaguBookApi.Models;
 using RaguBookApi.Services;
 using System;
@@ -16,7 +14,7 @@ namespace RaguBookApi.Tests
         public void IsIdNegativeNumber()
         {
             response = service.Get(-1);
-            Assert.Equal(new InvalidId().message, response.error.message);
+            Assert.Equal("Invalid Id, Id should be a positive number", response.error.message);
 
         }
 
@@ -48,7 +46,7 @@ namespace RaguBookApi.Tests
                 author = "JKRowling"
             };
             response = service.Post(book);
-            Assert.Equal(new InvalidName().message, response.error.message);
+            Assert.Equal("Name should be letters only", response.error.message);
 
         }
 
@@ -64,7 +62,7 @@ namespace RaguBookApi.Tests
                 author = "JKRowling"
             };
             response = service.Post(book);
-            Assert.Equal(new InvalidCategory().message, response.error.message);
+            Assert.Equal("Category should be letters only", response.error.message);
 
         }
 
@@ -80,7 +78,7 @@ namespace RaguBookApi.Tests
                 author = "JKRowling12"
             };
             response = service.Post(book);
-            Assert.Equal(new InvalidAuthor().message, response.error.message);
+            Assert.Equal("AuthorName should be letters only", response.error.message);
 
         }
     }

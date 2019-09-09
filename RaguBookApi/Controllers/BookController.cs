@@ -32,7 +32,7 @@ namespace RaguBookApi.Controllers
             }
             else
             {
-                if (response.error.status == 404)
+                if (response.error.message == "IdNotFound")
                 {
                     return NotFound(response.error);
                 }
@@ -49,7 +49,7 @@ namespace RaguBookApi.Controllers
             Response response = service.Post(book);
             if (response.error == null)
             {
-                return Ok(response.book);
+                return Created("201","Added Book");
             }
             else
             {
@@ -68,7 +68,7 @@ namespace RaguBookApi.Controllers
             }
             else
             {
-                if (response.error.status == 404)
+                if (response.error.message == "IdNotFound")
                 {
                     return NotFound(response.error);
                 }
@@ -85,11 +85,11 @@ namespace RaguBookApi.Controllers
             Response response = service.Delete(id);
             if (response.error == null)
             {
-                return Ok(response.book);
+                return NoContent();
             }
             else
             {
-                if(response.error.status == 404)
+                if(response.error.message == "IdNotFound")
                 {
                     return NotFound(response.error);
                 }

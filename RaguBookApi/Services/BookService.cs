@@ -1,19 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RaguBookApi.Errors;
-using RaguBookApi.Interfaces;
+﻿using RaguBookApi.Interfaces;
 using RaguBookApi.Models;
-using RaguBookApi.Validation;
-using System;
+using RaguBookApi.Validators;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using FluentValidation.Results;
 
 namespace RaguBookApi.Services
 {
     public class BookService : IServices
     {
         BookLibrary libray = new BookLibrary();
-
+        BookValidator validate = new BookValidator();
+        ValidationResult result;
+        List<Error> errors = new List<Error>();
         public Response Delete(int id)
         {
             if(Validate.IsIdPositiveNumber(id))
@@ -24,12 +22,12 @@ namespace RaguBookApi.Services
                 }
                 else
                 {
-                    return new Response(null, new IdNotFound());
+                    return new Response(null, new Error("Id", "IdNotFound"));
                 }
             }
             else
             {
-                return new Response(null, new InvalidId());
+                return new Response(null, new Error("Id", "Invalid Id, Id should be a positive number"));
             }
         }
 
@@ -48,95 +46,63 @@ namespace RaguBookApi.Services
                 }
                 else
                 {
-                    return new Response(null, new IdNotFound());
+                    return new Response(null, new Error("Id", "IdNotFound"));
                 }
                 
             }
             else
             {
-                return new Response(null, new InvalidId());
+                return new Response(null, new Error("Id", "Invalid Id, Id should be a positive number"));
             }
         }
 
         public Response Post(Book book)
         {
-            if(Validate.IsIdPositiveNumber(book.id))
+            result = validate.Validate(book);
+            if(result.IsValid)
             {
-                if(Validate.IsStringContainsOnlyLetters(book.name))
-                {
-                    if(Validate.IsStringContainsOnlyLetters(book.category))
-                    {
-                        if(Validate.IsStringContainsOnlyLetters(book.author))
-                        {
-                            libray.Add(book);
-                            return new Response(book, null);
-                        }
-                        else
-                        {
-                            return new Response(null, new InvalidAuthor());
-                        }
-                    }
-                    else
-                    {
-                        return new Response(null, new InvalidCategory());
-                    }
-                }
-                else
-                {
-                    return new Response(null, new InvalidName());
-                }
+                libray.Add(book);
+                return new Response(book, null);
             }
             else
             {
-                return new Response(null, new InvalidId());
+                foreach(var error in result.Errors)
+                {
+                    errors.Add(new Error(error.PropertyName, error.ErrorMessage));
+                }
+                return new Response(null, errors[0]);
+                
             }
         }
 
         public Response Put(int id, Book book)
         {
-            if (Validate.IsIdPositiveNumber(id))
+            result = validate.Validate(book);
+            if(Validate.IsIdPositiveNumber(id))
             {
-                if(Validate.IsIdPositiveNumber(book.id))
+                if(result.IsValid)
                 {
-                    if (Validate.IsStringContainsOnlyLetters(book.name))
+                    if (libray.Update(id, book))
                     {
-                        if (Validate.IsStringContainsOnlyLetters(book.category))
-                        {
-                            if (Validate.IsStringContainsOnlyLetters(book.author))
-                            {
-                                if (libray.Update(id, book))
-                                {
-                                    return new Response(book, null);
-                                }
-                                else
-                                {
-                                    return new Response(null, new IdNotFound());
-                                }
-
-                            }
-                            else
-                            {
-                                return new Response(null, new InvalidAuthor());
-                            }
-                        }
-                        else
-                        {
-                            return new Response(null, new InvalidCategory());
-                        }
+                        return new Response(book, null);
                     }
                     else
                     {
-                        return new Response(null, new InvalidName());
+                        return new Response(null, new Error("Id", "IdNotFound"));
                     }
                 }
                 else
                 {
-                    return new Response(null, new InvalidId());
+                    foreach(var error in result.Errors)
+                    {
+                        errors.Add(new Error(error.PropertyName, error.ErrorMessage));
+                    }
+                    return new Response(null, errors[0]);
                 }
             }
             else
             {
-                return new Response(null, new InvalidId());
+                return new Response(null, new Error("Id", "Invalid Id, Id should be a positive number"));
             }
         }
     }
