@@ -1,0 +1,17 @@
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.csprojAssemblyReference.cache
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.csproj.CoreCompileInputs.cache
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.AssemblyInfoInputs.cache
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.AssemblyInfo.cs
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.Tests.deps.json
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.Tests.runtimeconfig.json
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.Tests.runtimeconfig.dev.json
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.Tests.dll
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.Tests.pdb
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.dll
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\bin\Debug\netcoreapp2.1\RaguBookApi.pdb
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.csproj.CopyComplete
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.dll
+C:\Users\rkaruppaiah\Desktop\RaguWS\WebApiWs\RaguBookApi\RaguBookApi.Tests\obj\Debug\netcoreapp2.1\RaguBookApi.Tests.pdb

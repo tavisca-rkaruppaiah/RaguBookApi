@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaguBookApi", "RaguBookApi\RaguBookApi.csproj", "{079F3D3D-86E2-46EB-B73D-2E92A4998DE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaguBookApi.Tests", "RaguBookApi.Tests\RaguBookApi.Tests.csproj", "{40DC96EB-8DBD-4499-B6D1-15E7225F89BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{079F3D3D-86E2-46EB-B73D-2E92A4998DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079F3D3D-86E2-46EB-B73D-2E92A4998DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079F3D3D-86E2-46EB-B73D-2E92A4998DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079F3D3D-86E2-46EB-B73D-2E92A4998DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40DC96EB-8DBD-4499-B6D1-15E7225F89BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40DC96EB-8DBD-4499-B6D1-15E7225F89BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40DC96EB-8DBD-4499-B6D1-15E7225F89BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40DC96EB-8DBD-4499-B6D1-15E7225F89BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {953791FA-6C8B-474F-B189-EC65664C797E}
+	EndGlobalSection
+EndGlobal
